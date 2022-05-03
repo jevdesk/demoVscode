@@ -40,7 +40,7 @@
 </div>
 <div class="row" *ngIf="gano || perdio">
     <div class="col text-center">
-        <button class="btn btn-dark text-white">
+        <button (click)="reiniciar()" class="btn btn-dark text-white">
             Reiniciar
         </button>
     </div>
