@@ -1,6 +1,10 @@
 <div class="row">
-    <div class="col text-center">
+    <div class="col text-center" *ngIf="!gano">
         <img src="assets/imagenes/{{intentos}}.svg" class="ahorcado-img">
+        <h3>Intentos disponibles: {{intentos}}</h3>
+    </div>
+    <div class="col text-center" *ngIf="gano">
+        <img src="assets/imagenes/gane.svg" class="ahorcado-img">
         <h3>Intentos disponibles: {{intentos}}</h3>
     </div>
 </div>
@@ -30,14 +34,28 @@
     </div>
 </div>
 
-
-<div class="row" *ngIf="!gano && !perdio">
-    <div class="col text-center">
-        <button (click)="comprobar(letra)" *ngFor="let letra of letras" class="btn btn-primary">
-            {{letra}}
-        </button>
+<div class="modal modal-sheet position-static d-block bg-secondary py-5 text-center" *ngIf="!gano && !perdio">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-6 shadow">
+            <div class="card-body">
+                <h5>Por favor use nuestro teclado Virtual</h5>
+            </div>
+            <div class="modal-body py-0">
+                <p>Solo le quedan {{intentos}} </p>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button (click)="comprobar(letra)" *ngFor="let letra of letras" class="btn btn-secondary">
+                        {{letra}}
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
 <div class="row" *ngIf="gano || perdio">
     <div class="col text-center">
         <button (click)="reiniciar()" class="btn btn-dark text-white">
