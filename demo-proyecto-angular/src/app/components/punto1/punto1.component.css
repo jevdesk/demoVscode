@@ -1,0 +1,10 @@
+h5{
+    font-size: 3em;
+}
+p{
+    font-size: 1.5em;
+    
+}
+.oscurecer {
+    filter: brightness(50%);
+}
