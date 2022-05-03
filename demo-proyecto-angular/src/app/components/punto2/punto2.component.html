@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col text-center">
         <img src="assets/imagenes/{{intentos}}.png" class="ahorcado-img">
-        <h3>Intentos {{intentos}}</h3>
+        <h3>Intentos disponibles: {{intentos}}</h3>
     </div>
 </div>
 
@@ -38,7 +38,7 @@
         </button>
     </div>
 </div>
-<div class="row w-50" *ngIf="gano || perdio">
+<div class="row" *ngIf="gano || perdio">
     <div class="col text-center">
         <button class="btn btn-dark text-white">
             Reiniciar
