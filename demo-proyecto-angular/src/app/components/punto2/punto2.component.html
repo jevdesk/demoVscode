@@ -1,1 +1,41 @@
-<p>punto2 works!</p>
+<div class="row">
+    <div class="col text-center">
+        <img src="assets/imagenes/{{intentos}}.png" class="ahorcado-img">
+        <h3>Intentos {{intentos}}</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <h1>{{palabraOculta}}</h1>
+    </div>
+</div>
+
+<div class="row" *ngIf="gano">
+    <div class="col text-center">
+        <h1>Ganaste !!</h1>
+    </div>
+</div>
+
+<div class="row" *ngIf='perdio'>
+    <div class="col text-center">
+        <h1>Perdiste</h1>
+        <h4>La palabra era {{palabra}}</h4>
+    </div>
+</div>
+
+
+<div class="row" *ngIf="!gano && !perdio">
+    <div class="col text-center">
+        <button (click)="comprobar(letra)" *ngFor="let letra of letras" class="btn btn-primary">
+            {{letra}}
+        </button>
+    </div>
+</div>
+<div class="row" *ngIf="gano || perdio">
+    <div class="col text-center">
+        <button class="btn btn-dark text-white">
+            Reiniciar
+        </button>
+    </div>
+</div>
