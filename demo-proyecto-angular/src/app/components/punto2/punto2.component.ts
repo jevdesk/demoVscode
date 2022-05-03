@@ -56,7 +56,9 @@ comprobar(letra: string) {
       this.intentos --;
     }
   }
- 
+  reiniciar() {
+    window.location.reload();
+  }
   ngOnInit(): void {
   }
 
