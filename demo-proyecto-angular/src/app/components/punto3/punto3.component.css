@@ -1,0 +1,7 @@
+.intro {
+    height: 100%;
+}
+
+.gradient-custom {
+          background: linear-gradient(to bottom right, rgb(128, 126, 127), rgb(49, 49, 49))
+}
