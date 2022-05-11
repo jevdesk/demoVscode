@@ -1,1 +1,124 @@
-<p>home works!</p>
+<main>
+
+    <div class="text-center m-2">
+        <h2>Actividades del Tp4</h2>
+    </div>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Punto 1
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Cree un Componente “punto1” y realice un Slide Personalizado con angular, el
+                    cual tendrá Noticias
+                    personalizadas a su elección, cada noticia puede estar acompañado por una fotografía descriptiva de
+                    la
+                    noticia. Como fuente de datos, defina en el Controlador, un array de objetos que será utilizado en
+                    la vista
+                    HTML. Para recorrer las noticias se dispondrá un botón para adelantar y otro para retrasar.
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="button" [routerLink]="['../punto1']">Punto1</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Punto 2
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Cree un componente “punto2” e implemente el Juego del ahorcado. ( utilice
+                    bootstrap para maquetar la
+                    salida). Consideraciones:
+                    <ol>
+                        <li>Se dispone de un banco de 10 palabras (array), en una corrida del programa se elige
+                            una.palabra. Para
+                            simplificar el proceso las palabras son de una categoría especial a elección (Ej. Animales,
+                            Jugadores
+                            Argentino, Actores Argentinos, etc) que será indicada en alguna parte la pantalla del Juego
+                            al usuario.</li>
+                        <li>Por cada corrida:
+                            <ol>
+                                <li>Los intentos permitidos en cada corrida son a elección (ej. 5). En caso de que en un
+                                    intento
+                                    el usuario no adivine a los intentos permitidos se le va restando 1 (uno). El
+                                    usuario pierde
+                                    cuando sus intentos llegan a 0(cero). Debe mostrar en un modal que el usuario ha
+                                    perdido.</li>
+                                <li>En caso de acertar no se le restaran intentos a los disponibles por el usuario y la
+                                    letra
+                                    acertada debería ser guardada para poder comparar luego la palabra que se está
+                                    formando
+                                    con la que se debe adivinar</li>
+                            </ol>
+                        </li>
+                        <li>Para cada intento se debe elegir una imagen predefinida (a elección) que mostrara el estado
+                            del juego
+                            (personita) o en la corrida actual.</li>
+                    </ol>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+
+                        <button class="btn btn-primary" type="button" [routerLink]="['../punto2']">Punto2</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingthree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapsethree" aria-expanded="false" aria-controls="flush-collapsethree">
+                    Punto 3
+                </button>
+            </h2>
+            <div id="flush-collapsethree" class="accordion-collapse collapse" aria-labelledby="flush-headingthree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Una empresa de turismo local quiere crear una app para el proceso de venta
+                    de pasajes, se ingresa la
+                    información mediante un FORMULARIO almacenándola en un objeto pasaje {{ '{' }}dniPasajero,
+                    precioPasaje,
+                    categoriaPasajero, fechaCompra{{ '}' }} donde la categoría del pasajero son: m = Menor, a =
+                    Adulto, j=
+                    Jubilado.
+                    Comportamiento:
+                    <ol>
+                        <li>Si el pasajero es un menor, se deberá hacer un 25% de descuento, si es un jubilado un 50% de
+                            descuento, si es adulto no hay descuento. Utilizar Lista Desplegable para elegir la opción
+                            del
+                            Pasajero, programar el evento (cambio) para hacer el cálculo cuando se cambie en la lista
+                            desplegable
+                            el tipo de pasajero y también cuando se cambie el precio del pasaje</li>
+                        <li>Utilizar la directiva ngIf para mostrar en una caja LABEL, dentro del mismo formulario, el
+                            precio
+                            total de la transacción SOLO en el caso de que el precio y el tipo de pasajero hayan sido
+                            ingresados.
+                            (no utilizar modal).
+                        </li>
+                        <li>Mediante un botón se REGISTRAR se registra la venta de los pasajes en una lista (Array). El
+                            array
+                            será gestionado mediante [ SERVICE DE ANGULAR] para todas las operaciones del CRUD</li>
+                        <li>En una sección inferior al formulario, se debe mostrar mediante una lista
+                            (angular-datatable) todos los
+                            pasajes vendidos. Además, también en una sección de resumen se debe mostrar un resumen de
+                            las
+                            ventas de pasajes por categoria de pasajero y el total general.</li>
+                        <li>Utilizar pipes para mostrar información formateada como ser fecha, precio: ej. dd/MM/yyyy
+                        </li>
+                    </ol>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="button" [routerLink]="['../punto3']">Punto3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
