@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./punto2.component.css']
 })
 export class Punto2Component implements OnInit {
+  categoria = 'fruta';
   palabras = ['MANZANA', 'PERA', 'MANDARINA','ANANA','POMELO','LIMON','NARANJA','BANANA','HIGO','UVA'];
   indice = Math.floor((Math.random() * (10)));
   palabra = this.palabras[this.indice];
