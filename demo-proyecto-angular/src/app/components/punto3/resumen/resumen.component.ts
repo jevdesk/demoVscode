@@ -32,4 +32,23 @@ this.pasajeros = this.pasajeroService.getPasajeros();
   irFormulario() {
     this.router.navigate(['formulario']);
   }
+  
+  filtrTablas(value: any, arg: any): any  {
+    if (arg==""||arg=="Todos") {
+      return value;
+    }
+    else {
+      const resultFiltro = [];
+      for(const pasajeros of value){
+        if(pasajeros.categoria.indexOf(arg) > -1){
+           resultFiltro.push(pasajeros);
+        };
+      };
+      return resultFiltro.length;
+    }
+  }
+  contar(arg:string) {
+    return this.filtrTablas(this.pasajeros, arg)
+    
+  }
 }

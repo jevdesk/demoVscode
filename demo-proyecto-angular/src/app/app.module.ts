@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,10 @@ import { ListaventasComponent } from './components/punto3/listaventas/listaventa
 import { ResumenComponent } from './components/punto3/resumen/resumen.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import localeEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+import { FiltronamePipe } from './pipes/filtroname.pipe';
+registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
@@ -29,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormularioComponent,
     ListaventasComponent,
     ResumenComponent,
+    FiltronamePipe,
     
   ],
   imports: [
@@ -37,7 +42,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+   {provide:LOCALE_ID,useValue:'es'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

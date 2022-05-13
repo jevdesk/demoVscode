@@ -19,9 +19,9 @@ export class FormularioComponent implements OnInit {
   porcentaje!: number;
   CIFRA = 8;
   MINPRECIO =100;
-  MAXPRECIO =10000;
+  MAXPRECIO =1000000;
 
-  categorialist = ['','Menor', 'Agulto', 'Jubilado']
+  categorialist = ['','Menor', 'Adulto', 'Jubilado']
   pasajeroCtrl = this.fb.group({
     dni: [
       '',
