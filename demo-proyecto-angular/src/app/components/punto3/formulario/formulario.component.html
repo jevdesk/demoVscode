@@ -47,13 +47,14 @@
                                 <div class="alert alert-danger"
                                     *ngIf="precio.invalid && (precio.dirty || precio.touched)">
                                     <div *ngIf="precio.errors?.['required']">
-                                        Precios desde {{MINPRECIO}} a {{MAXPRECIO}}
+                                        Precios desde {{MINPRECIO|currency:'CAD':'symbol-narrow'}} a
+                                        {{MAXPRECIO|currency:'CAD':'symbol-narrow'}}
                                     </div>
                                     <div *ngIf="precio.errors?.['min']">
-                                        El mínimo precio es de: {{MINPRECIO}}
+                                        El mínimo precio es de: {{MINPRECIO|currency:'CAD':'symbol-narrow'}}
                                     </div>
                                     <div *ngIf="precio.errors?.['max']">
-                                        El máximo precio es de: {{MAXPRECIO}}
+                                        El máximo precio es de: {{MAXPRECIO|currency:'CAD':'symbol-narrow'}}
                                     </div>
 
                                 </div>
@@ -63,7 +64,7 @@
                                     {{cuantoDescuento(pasajeroCtrl.value.categoria,pasajeroCtrl.value.precio)}}
                                     {{porcentaje}}%, total a
                                     pagar:
-                                    ${{descuento}}</label>
+                                    {{descuento|currency:'CAD':'symbol-narrow'}}</label>
                             </div>
                             <div class="mt-4">
                                 <input class="btn btn-primary btn-lg" type="submit" value="Registrar compra"

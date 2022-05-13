@@ -21,4 +21,5 @@ export class Punto3Component implements OnInit {
   irFormulario() {
     this.router.navigate(['formulario']);
   }
+  
 }

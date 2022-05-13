@@ -8,7 +8,10 @@ import { PasajeroService } from 'src/app/services/pasajero.service';
   styleUrls: ['./listaventas.component.css']
 })
 export class ListaventasComponent implements OnInit {
-pasajeros: Array<Pasajero>;
+  pasajeros: Array<Pasajero>;
+  inicio = 0;
+  categorialist = ['Todos', 'Menor', 'Adulto', 'Jubilado']
+  filtronombre = "";
   constructor(private pasajeroService:PasajeroService,
     private router: Router) { 
     this.pasajeros = new Array<Pasajero>();
@@ -25,5 +28,25 @@ pasajeros: Array<Pasajero>;
   }
   irResumen() {
     this.router.navigate(['resumen']);
+  }
+
+  siguiente() {
+    const max = this.pasajeros.length;
+    if (this.inicio < max && max -this.inicio >=5) {
+      this.inicio = this.inicio +5;
+      }
+    else {
+        this.inicio = 0; 
+      }
+  }
+
+
+  anterior() {
+    if (this.inicio<=5&&this.inicio>=0) {
+       this.inicio = 0;
+    }
+    else {
+     this.inicio = this.inicio - 5;
+    }
   }
 }
