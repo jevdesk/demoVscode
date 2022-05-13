@@ -3,13 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { Punto1Component } from './components/punto1/punto1.component';
 import { Punto2Component } from './components/punto2/punto2.component';
+import { FormularioComponent } from './components/punto3/formulario/formulario.component';
+import { ListaventasComponent } from './components/punto3/listaventas/listaventas.component';
 import { Punto3Component } from './components/punto3/punto3.component';
+import { ResumenComponent } from './components/punto3/resumen/resumen.component';
+
 
 const routes: Routes = [
 { path: 'home', component: HomeComponent },
 { path: 'punto1', component: Punto1Component },
 { path: 'punto2', component: Punto2Component },
 { path: 'punto3', component: Punto3Component },
+{ path: 'formulario', component: FormularioComponent },
+{ path: 'lista', component: ListaventasComponent },
+{ path: 'resumen', component: ResumenComponent },
 { path: '**', pathMatch:'full',redirectTo:'home' }
 ];
 

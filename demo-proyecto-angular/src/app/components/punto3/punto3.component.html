@@ -1,114 +1,26 @@
-<main>
+<main class="bg-dark">
     <section class="intro">
-        <div class="mask d-flex align-items-center h-100 gradient-custom">
+
+        <div class="mask d-flex align-items-center h-100 ">
             <div class="container">
+                <div>
+                    <h2 class="text-light m-4 text-center">Punto 3: Uso de Serve de Angular</h2>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-9 col-xl-7 p-4">
                         <div class="card">
-                            <div class="card-body p-4 p-md-5">
-                                <h3 class="mb-4 pb-2">Registra tu compra</h3>
-
-                                <form action="">
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-
-                                            <div class="form-outline">
-                                                <label class="form-label" for="numDNI">Número de DNI</label>
-                                                <input type="number" id="numDNI" class="form-control" />
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label class="form-label" for="title-select">Seleccione su categoría :
-                                                menor de edad, adulto, o jubilado</label>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option value="m">Menor</option>
-                                                <option value="a">Adulto</option>
-                                                <option value="j">Jubilado</option>
-                                            </select>
-                                            <label class="form-label" for="firstName">El precio es de $$$</label>
-
-                                            <div class="mt-4">
-                                                <input class="btn btn-primary btn-lg" type="submit"
-                                                    value="Registrar compra" />
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5>Vendidos</h5>
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">Handle</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td colspan="2">Larry the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h5>Registro</h5>
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">Handle</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td colspan="2">Larry the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-
-                                </form>
+                            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                <button type="button" class="btn btn-outline-primary"
+                                    (click)="irFormulario()">Formulario</button>
+                                <button type="button" class="btn btn-outline-primary" (click)="irLista()">Lista</button>
+                                <button type="button" class="btn btn-outline-primary"
+                                    (click)="irResumen()">Resumen</button>
                             </div>
                         </div>
                     </div>
+                    <app-formulario></app-formulario>
+                    <app-listaventas></app-listaventas>
+                    <app-resumen></app-resumen>
                 </div>
             </div>
         </div>

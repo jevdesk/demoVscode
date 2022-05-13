@@ -10,6 +10,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormularioComponent } from './components/punto3/formulario/formulario.component';
+import { ListaventasComponent } from './components/punto3/listaventas/listaventas.component';
+import { ResumenComponent } from './components/punto3/resumen/resumen.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,17 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     HeaderComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    FormularioComponent,
+    ListaventasComponent,
+    ResumenComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

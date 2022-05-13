@@ -1,0 +1,35 @@
+<div class="row justify-content-center bg-dark me-0 ms-0">
+    <div class="col-12 col-lg-9 col-xl-7 p-4">
+        <div class="card">
+            <div class="p-3 table-responsive">
+                <h5>Vendidos</h5>
+                <table class="table table-striped table-hover table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ventas a menores</th>
+                            <th scope="col">Ventas a adultos</th>
+                            <th scope="col">Ventas a jubilados</th>
+                            <th scope="col">Ventas Totales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>yyy</td>
+                            <td>{{ pasajeros.length }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary" (click)="irFormulario()">
+                    Formulario
+                </button>
+                <button type="button" class="btn btn-outline-primary" (click)="irLista()">
+                    Lista
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

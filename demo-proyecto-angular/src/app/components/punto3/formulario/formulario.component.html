@@ -1,0 +1,82 @@
+<div class="row justify-content-center bg-dark me-0 ms-0">
+    <div class="col-12 col-lg-9 col-xl-7 p-4">
+        <div class="card">
+            <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2">Registra tu compra</h3>
+                <form [formGroup]="pasajeroCtrl">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label class="form-label">Número de DNI</label>
+                                <input type="number" formControlName="dni" class="form-control" />
+                                <div class="alert alert-danger" *ngIf="dni.invalid && (dni.dirty || dni.touched)">
+                                    <div *ngIf="dni.errors?.['required']">
+                                        DNI es requerido y debe ser un numero de {{CIFRA}} cifras
+                                    </div>
+                                    <div *ngIf="dni.errors?.['min']">
+                                        Debe tener al menos {{CIFRA}} cifras
+                                    </div>
+                                    <div *ngIf="dni.errors?.['max']">
+                                        No debe tener mas de {{CIFRA}} cifras
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label class=" form-label" for="title-select">Categoría :
+                            </label>
+                            <select class="form-select" aria-label="Default select example" formControlName="categoria">
+                                <option name="categoria" *ngFor="let item of categorialist">
+                                    {{item}}
+                                </option>
+                            </select>
+                            <div class="alert alert-danger" *ngIf="categoria.invalid && (categoria.touched)">
+                                <div *ngIf="categoria.errors?.['required']">
+                                    Campo requerido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label class="form-label">Precio del Pasaje</label>
+                                <input type="number" formControlName="precio" class="form-control" />
+                                <div class="alert alert-danger"
+                                    *ngIf="precio.invalid && (precio.dirty || precio.touched)">
+                                    <div *ngIf="precio.errors?.['required']">
+                                        Precios desde {{MINPRECIO}} a {{MAXPRECIO}}
+                                    </div>
+                                    <div *ngIf="precio.errors?.['min']">
+                                        El mínimo precio es de: {{MINPRECIO}}
+                                    </div>
+                                    <div *ngIf="precio.errors?.['max']">
+                                        El máximo precio es de: {{MAXPRECIO}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div *ngIf="categoria.valid &&precio.valid">
+                                <label class="form-label" for="firstName">Descuento de
+                                    {{cuantoDescuento(pasajeroCtrl.value.categoria,pasajeroCtrl.value.precio)}}
+                                    {{porcentaje}}%, total a
+                                    pagar:
+                                    ${{descuento}}</label>
+                            </div>
+                            <div class="mt-4">
+                                <input class="btn btn-primary btn-lg" type="submit" value="Registrar compra"
+                                    (click)="enviarPasajero()" [disabled]="!pasajeroCtrl.valid" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary" (click)="irLista()">Lista</button>
+                <button type="button" class="btn btn-outline-primary" (click)="irResumen()">Resumen</button>
+            </div>
+        </div>
+    </div>
+</div>
